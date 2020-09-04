@@ -10,6 +10,8 @@ namespace ejercicio1
     {
         static void Main(string[] args)
         {
+            string hello = "hello world";
+            Console.WriteLine(hello);
         }
     }
 }
