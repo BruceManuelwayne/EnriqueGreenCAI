@@ -15,7 +15,7 @@ namespace EjRepaso7
                 int num = 0;
                 do
                 {
-                    Console.Write("Ingrese " + mensaje + ": ");
+                    Console.Write("Ingrese " + mensaje + " : ");
                     if (!(int.TryParse(Console.ReadLine(), out num)))
                     {
                         num = -1;
@@ -30,6 +30,19 @@ namespace EjRepaso7
             }
             static void Main(string[] args)
             {
+                const int cantidad = 5;
+                int[] numeros = new int[cantidad]; 
+
+                for (int i = 0; i< cantidad; i++)
+                {
+                    numeros[i] = Validacion.pedirNumero("el numero " + i+1,0,9999999); 
+                }
+
+                Array.Sort(numeros); 
+                Console.Write("El menor numero : " + numeros[0] + ".\nEl intermedio numero: " + numeros[2] + ".\nEl mayor numero: " + numeros[4]);
+
+
+
 
             }
         }
