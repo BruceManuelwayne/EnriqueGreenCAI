@@ -17,13 +17,14 @@ namespace Repaso8_20
                 if (!(int.TryParse(Console.ReadLine(), out num)))
                 {
                     num = -1;
-                    Console.WriteLine("Error. Reingrese un valor numerico.");
+                    Console.WriteLine("Error, ingrese un valor numero.");
                 }
-                else if (num < minimo || num > max)
-                {
+                else if (num < minimo || num > max) {
                     Console.WriteLine("Error. El numero debe estar entre " + minimo + " y " + max);
+
                 }
-            } while (num < minimo || num > max);
+
+            } while (num > minimo || num > max);
             return num;
         }
         public static string pedirTexto(string mensaje)
@@ -69,7 +70,7 @@ namespace Repaso8_20
             {
                 if(!DateTime.TryParse(Validaciones.pedirTexto(mensaje), out valor))
                 {
-                    Console.WriteLine("Error. Ingresar una fecha: ");
+                    Console.WriteLine("Error. Infresar una fecha: ");
                 }
                 else
                 {
