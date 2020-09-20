@@ -13,11 +13,28 @@ namespace ej14
         static void Main(string[] args)
         {
             int numero;
-            int i; 
+            bool esNumero = false; 
+            int i;
+            string input; 
 
-            // falta validacion 
+
+          
             Console.Write("Ingrese el numero para calcular tabla de multiplicacion. ");
+            input = Console.ReadLine();
 
+            while ( esNumero == false)
+            {
+                
+                if (int.TryParse(input, out numero)){
+                    esNumero = true; 
+                }
+                else
+                {
+                    Console.WriteLine("No es numero , ingrese de nuevo"); 
+                }
+            }
+            
+           
             numero = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("\n");
